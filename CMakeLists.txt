@@ -11,7 +11,7 @@ IF(NOT ZLIB_FOUND)
 	message(FATAL_ERROR "zlib library is required for libminizip!")
 ENDIF(NOT ZLIB_FOUND)
 
-file(GLOB_RECURSE MINIZIP_SOURCES ${PROJECT_SOURCE_DIR}/src/*.c)
+file(GLOB_RECURSE MINIZIP_SOURCES ${PROJECT_SOURCE_DIR}/src/ioapi.c ${PROJECT_SOURCE_DIR}/src/unzip.c ${PROJECT_SOURCE_DIR}/src/zip.c)
 
 add_library(minizip_static STATIC ${MINIZIP_SOURCES})
 add_library(minizip_shared SHARED ${MINIZIP_SOURCES})
