@@ -5,9 +5,6 @@ cmake_minimum_required(VERSION 3.5...3.28)
 
 project("minizip" C)
 
-# Set cmake debug postfix to d
-set(CMAKE_DEBUG_POSTFIX "d")
-
 INCLUDE(FindZLIB)
 
 IF(NOT ZLIB_FOUND)
