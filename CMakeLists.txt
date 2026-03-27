@@ -3,7 +3,7 @@
 #***************************************************************************
 cmake_minimum_required(VERSION 3.5...3.28)
 
-project(minizip LANGUAGES C)
+project(minizip LANGUAGES C VERSION 0.1.0)
 
 INCLUDE(FindZLIB)
 
