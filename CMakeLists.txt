@@ -21,7 +21,7 @@ add_library(minizip::minizip_shared ALIAS minizip_shared)
 
 foreach(target IN ITEMS minizip_static minizip_shared)
 	target_link_directories(${target} PUBLIC ${ZLIB_LIBRARIES})
-	target_link_libraries(${target} PUBLIC minizip ${ZLIB_LIBRARIES})
+	target_link_libraries(${target} PUBLIC ${ZLIB_LIBRARIES})
 	
 	target_include_directories(${target} PUBLIC ${ZLIB_INCLUDE_DIR})
 	target_include_directories(${target} PUBLIC 
