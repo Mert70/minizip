@@ -11,6 +11,8 @@
 
 */
 
+#if defined(_WIN32) || defined (_WIN64)
+
 #include <stdlib.h>
 
 #include "zlib.h"
@@ -387,3 +389,5 @@ void fill_win32_filefunc64W(zlib_filefunc64_def* pzlib_filefunc_def)
     pzlib_filefunc_def->zerror_file = win32_error_file_func;
     pzlib_filefunc_def->opaque = NULL;
 }
+
+#endif
